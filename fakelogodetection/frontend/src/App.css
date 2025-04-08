@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* App Container */
+.app-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.app-container:hover {
+    transform: scale(1.02);
+}
+
+/* Upload Box */
+.upload-box h2 {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Drag and Drop Box */
+.upload-label {
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.upload-label:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.upload-label.drag-active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Upload Button */
+.upload-button {
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight:bolder;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.upload-button:hover {
+    box-shadow: 0px 0px 15px rgba(255, 126, 179, 0.8);
+    transform: scale(1.05);
+}
+
+.upload-button:disabled {
+    background: gray;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Loading Spinner */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Prediction Result */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    color: 000;
+}
+
+.result-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.confidence {
+    font-size: 14px;
+    color: #000;
+}
+
+/* Image Preview */
+.preview {
+    margin-top: 10px;
+}
+
+.preview-image {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
