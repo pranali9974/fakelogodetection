@@ -45,3 +45,5 @@ You can retrain the model by modifying model.py and running it again.
 ✨ Screenshots
 [🎬 Click here to view the demo video](./assets/fake_logo_detection.mp4)
 ![not_loaded](assets/choose.png)
+![not_loaded](assets/fake.png)
+![not_loaded](assets/real.png)
